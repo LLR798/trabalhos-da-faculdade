@@ -1,0 +1,390 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* MENU E TOPO */
+
+#header-top {
+  background-image: url(../imagens/CAMARA-DEPUTADOS-PLENARIO-2020-1.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 15px;
+}
+
+.logo {
+  position: sticky;
+  padding-top: 10px;
+  float: left;
+  left: 50px;
+}
+
+.header-nav {
+  position: sticky;
+  float: right;
+  color: #fff;
+}
+
+.header-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 15px 0 0;
+  padding: 5px;
+  text-shadow: -2px -2px 0px rgb(0, 0, 0), -2px 2px 0px rgb(0, 0, 0),
+    2px -2px 0px rgb(0, 0, 0), 2px 0px 0px rgb(0, 0, 0);
+}
+
+.header-nav li:hover {
+  cursor: pointer;
+  list-style: none;
+  display: inline-block;
+  margin: 0 15px 0 0;
+  padding: 5px;
+  text-shadow: -2px -2px 0px rgb(0, 0, 0), -2px 2px 0px rgb(0, 0, 0),
+    2px -2px 0px rgb(0, 0, 0), 2px 0px 0px rgb(0, 0, 0);
+}
+
+.header-content {
+  text-align: center;
+  color: #fff;
+  margin-top: 250px;
+}
+
+.header-content h1 {
+  text-transform: uppercase;
+  font-size: 48px;
+  text-shadow: -2px -2px 0px rgb(0, 0, 0), -2px 2px 0px rgb(0, 0, 0),
+    2px -2px 0px rgb(0, 0, 0), 2px 0px 0px rgb(0, 0, 0);
+}
+
+.header-content p {
+  text-shadow: -2px -2px 0px rgb(0, 0, 0), -2px 2px 0px rgb(0, 0, 0),
+    2px -2px 0px rgb(0, 0, 0), 2px 0px 0px rgb(0, 0, 0);
+}
+
+.header-content .btn-1 {
+  border: none;
+  padding: 15px;
+  margin-top: 15px;
+  background-color: #03539c;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.header-content .btn-1 {
+  cursor: pointer;
+  border: none;
+  padding: 15px;
+  margin-top: 15px;
+  background-color: #03539c;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* BUSCA DOS CANDIDATOS */
+
+.busca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.busca #search {
+  width: 492px;
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+}
+
+.busca .btn-buscar {
+  background-color: #03539c;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 500px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.busca .btn-buscar:hover {
+  cursor: pointer;
+  background-color: #03539c;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 500px;
+  color: #fff;
+}
+
+/* PADRÃO DAS BUSCAS */
+.busca .title-search {
+  font-size: 18px;
+  color: #03539c;
+}
+
+.busca .p-search {
+  font-size: 24px;
+  color: #484a45;
+  font-weight: bold;
+}
+
+.icon-busca {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+/* DEPUTADOS */
+
+.deputados {
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.deputados-card {
+  width: 177px;
+  margin: 15px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.deputados-title {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* PARTIDOS */
+
+.partidos {
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.partidos-card {
+  width: 177px;
+  margin: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.partidos-title {
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #999999;
+}
+
+
+/* NOTÍCIAS */
+
+.noticia {
+  margin-top: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #03539c;
+  font-size: 18px;
+}
+
+.img {
+  float: left;
+  margin-left: 150px;
+  margin-right: 25px;
+}
+.texto {
+  margin-left: 50px;
+  margin-right: 125px;
+  text-align: justify;
+}
+
+.texto h4 {
+  color: #484a45;
+  font-size: 24px;
+}
+
+.texto p {
+  margin-top: 60px;
+  color: #999999;
+}
+
+.fonte {
+  margin-top: 50px;
+  color: #999999;
+}
+
+
+.not .btn-noticias {
+  background-color: #03539c;
+  border: none;
+  border-radius: 5px;
+  margin-top: 76px;
+  height: 40px;
+  width: 610px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.not .btn-noticias:hover {
+  cursor: pointer;
+  background-color: #03539c;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 610px;
+  color: #fff;
+}
+
+
+/* TABELAS */
+
+table, tr, .td-cells{
+  border-collapse: collapse;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+}
+
+#head_title{
+  color: #484a45;
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.celula_title, .cel1, .cel2  {
+  text-align: center;
+}
+
+.celula_1, .celula_2 {
+  font-weight: bold;
+}
+
+.cel1 {
+  background-color: #eeeeee;  
+}
+
+.cel2 {
+  background-color: #fff;
+}
+
+
+/* CONTATO */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.contact-text {
+  display: flex;
+  margin-left: 235px;
+  margin-right: 235px;
+  margin-bottom: 50px;
+  justify-content: left;
+  text-align: left;
+  flex-direction: column;
+  color: #999999;
+}
+
+.contact-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-3 {
+  background-color: #03539c;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 500px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.btn-3:hover {
+  cursor: pointer;
+  background-color: #03539c;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 500px;
+  color: #fff;
+}
+
+.contact .title-contact {
+  font-size: 18px;
+  color: #03539c;
+}
+
+.contact .p-contact {
+  font-size: 24px;
+  color: #484a45;
+  font-weight: bold;
+} 
+
+
+/* RODAPÉ */
+
+.footer {
+  background-color: #03539c;
+  width: 100%;
+  height: 50px;
+}
+
+.footer p {
+  color: #fff;
+  text-align: center;
+  padding-top: 15px;
+}
+
+
+/* DEMAIS ÍCONES */
+
+.others-icons {
+  color: #03539c;
+  font-size: 24px;
+}
+
+.others-icons:hover {
+  cursor: pointer;
+  color: #03539c;
+  font-size: 24px;
+}
+
+

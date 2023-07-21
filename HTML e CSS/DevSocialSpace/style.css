@@ -1,0 +1,337 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Define as variáveis de cor e espaçamento */
+:root {
+  --cor-de-fundo: #f2f2f2;
+  --cor-de-destaque: #7001da;
+  --espacamento: 20px;
+}
+
+/* Define as fontes */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+/* Define o estilo do cabeçalho */
+#header {
+  background-color: var(--cor-de-destaque);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px var(--espacamento);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo {
+  cursor: pointer;
+  color: var(--cor-de-fundo);
+  font-size: 28px;
+}
+
+/* Define o estilo do menu */
+.nav ul {
+  display: flex;
+}
+
+.nav a {
+  color: #fff;
+  padding: 10px;
+}
+
+.nav a:hover {
+  background-color: #fff;
+  color: var(--cor-de-destaque);
+}
+
+/* Define o estilo do feed de postagens */
+.feed {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacamento);
+  background-color: var(--cor-de-fundo);
+  padding: var(--espacamento);
+  margin: 120px 0;
+}
+
+.feed article {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: var(--espacamento);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacamento);
+}
+
+.feed header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feed img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.feed .conteudo {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.feed footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+}
+
+.feed .acoes {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feed .acoes li {
+  margin-right: 10px;
+}
+
+.feed .comentarios {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feed .comentarios li img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.feed .comentarios li div {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Define o estilo da lista de amigos */
+.amigos {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: var(--espacamento);
+  margin-top: var(--espacamento);
+}
+
+.amigos h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.amigos ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.amigos li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.amigos img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.amigos div {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.amigos div p:first-child {
+  margin-bottom: 5px;
+}
+
+.amigos div p:last-child {
+  color: #666;
+}
+
+/* Define os estilos para as sugestoes de amizade */
+.sugestoes {
+  background-color: var(--cor-de-fundo);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacamento);
+  padding: var(--espacamento);
+}
+
+.sugestoes h2 {
+  margin: 0;
+}
+
+.sugestoes ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sugestoes li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.sugestoes li img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.sugestoes li div {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.sugestoes li p {
+  margin: 0;
+  color: #666;
+}
+
+.sugestoes li button {
+  background-color: var(--cor-de-destaque);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sugestoes li button:hover {
+  background-color: #006666;
+}
+
+/* Define os estilos do footer */
+.footer {
+  background-color: var(--cor-de-destaque);
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  color: var(--cor-de-fundo);
+  font-size: 18px;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .logo {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .nav {
+    margin-top: 20px;
+  }
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav a {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .feed {
+    margin-top: 180px;
+  }
+  .feed article {
+    grid-template-columns: 1fr;
+  }
+  .feed img {
+    width: 30px;
+    height: 30px;
+  }
+  .feed .conteudo {
+    font-size: 14px;
+  }
+  .feed footer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .amigos {
+    margin-top: 60px;
+  }
+  .amigos li {
+    flex-direction: column;
+    align-items: center;
+  }
+  .amigos img {
+    width: 50px;
+    height: 50px;
+  }
+  .amigos div {
+    font-size: 14px;
+  }
+  .sugestoes {
+    margin-top: 60px;
+  }
+  .sugestoes li {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .sugestoes li img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

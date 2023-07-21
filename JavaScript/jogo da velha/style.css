@@ -1,0 +1,40 @@
+body {
+  text-align: center;
+}
+
+.casa {
+  text-align: center;
+  width: 50px;
+  background-color: #eee;
+  display: inline-block;
+  padding: 40px;
+  font-size: 60px;
+  margin: 5px;
+  cursor: pointer;
+  color: #eee;
+}
+.casa:hover {
+  text-align: center;
+  width: 50px;
+  background-color: #cc00df;
+  display: inline-block;
+  padding: 40px;
+  font-size: 60px;
+  margin: 5px;
+  cursor: pointer;
+  color: #cc00df;
+}
+
+.jogador,
+.vencedor {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  width: 10%;
+  height: 30px;
+  background: #eee;
+  cursor: pointer;
+}
