@@ -1,0 +1,15 @@
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/bin/Debug/net6.0/BankTariffSystem
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/bin/Debug/net6.0/BankTariffSystem.deps.json
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/bin/Debug/net6.0/BankTariffSystem.runtimeconfig.json
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/bin/Debug/net6.0/BankTariffSystem.dll
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/bin/Debug/net6.0/BankTariffSystem.pdb
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/obj/Debug/net6.0/BankTariffSystem.csproj.AssemblyReference.cache
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/obj/Debug/net6.0/BankTariffSystem.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/obj/Debug/net6.0/BankTariffSystem.AssemblyInfoInputs.cache
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/obj/Debug/net6.0/BankTariffSystem.AssemblyInfo.cs
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/obj/Debug/net6.0/BankTariffSystem.csproj.CoreCompileInputs.cache
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/obj/Debug/net6.0/BankTariffSystem.dll
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/obj/Debug/net6.0/refint/BankTariffSystem.dll
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/obj/Debug/net6.0/BankTariffSystem.pdb
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/obj/Debug/net6.0/BankTariffSystem.genruntimeconfig.cache
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-de-entrada/BankTariffSystem/BankTariffSystem/obj/Debug/net6.0/ref/BankTariffSystem.dll
