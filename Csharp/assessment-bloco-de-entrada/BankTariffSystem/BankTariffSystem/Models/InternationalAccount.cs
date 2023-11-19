@@ -1,31 +1,18 @@
 namespace BankTariffSystem.Models;
 
-sealed class InternationalAccount : Account, ITariff
+class InternationalAccount : Account, ITariff
 {
-    public InternationalAccount(decimal dollarBalance, decimal balance) : base(balance)
-    {
-        Balance = dollarBalance;
-    }
+    private const double rateCambioRealDolar = 5.0;
+    public InternationalAccount(double valueCurrentBalanceInDollar) : base(valueCurrentBalanceInDollar) { }
 
-    private decimal _dollarBalance;
-
-    public override decimal Balance
-    {
-        get => _dollarBalance * 5m;
-        set
+    public override double BalanceValue 
+    { 
+        get => base.BalanceValue; 
+        protected set 
         {
-            if (value <= 0)
-            {
-                throw new ArgumentOutOfRangeException("Balance cannot be less than zero.");
-            }
-            _dollarBalance = value / 5m;
+            base.BalanceValue = value * rateCambioRealDolar;
         }
     }
-
-    public decimal Calculate(decimal tariff)
-    {
-        // 2.5% tariff on the balance.
-        tariff = Balance * 0.025m;
-        return tariff;
-    }
+    
+    public double Calculate() => BalanceValue * 2.5 / 100;
 }

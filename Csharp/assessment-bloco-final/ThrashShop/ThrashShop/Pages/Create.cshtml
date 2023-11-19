@@ -1,0 +1,61 @@
+@page
+@model ThrashShop.Pages.Create
+
+<div class="row pt-5">
+    <div class="col-md-4">
+
+        <form method="post">
+            <h4>Inclusão de um novo equipamento</h4>
+            <hr/>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Skate.Nome" class="control-label"></label>
+                <input asp-for="Skate.Nome" class="form-control"/>
+                <span asp-validation-for="Skate.Nome" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Skate.Descricao" class="control-label"></label>
+                <input asp-for="Skate.Descricao" class="form-control"/>
+                <span asp-validation-for="Skate.Descricao" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Skate.ImagemUri" class="control-label"></label>
+                <input asp-for="Skate.ImagemUri" class="form-control"/>
+                <span asp-validation-for="Skate.ImagemUri" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Skate.Preco" class="control-label"></label>
+                <input asp-for="Skate.Preco" class="form-control"/>
+                <span asp-validation-for="Skate.Preco" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3 mb-3">
+                <input class="form-check-input" asp-for="Skate.EntregaExpressa"/>
+                <label asp-for="Skate.EntregaExpressa"></label>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Skate.DataCadastro" class="control-label"></label>
+                <input asp-for="Skate.DataCadastro" class="form-control"/>
+                <span asp-validation-for="Skate.DataCadastro" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-4">
+                <input type="submit" value="Salvar" class="btn" style="background-color: #BD76FE"/>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+@section Scripts
+{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

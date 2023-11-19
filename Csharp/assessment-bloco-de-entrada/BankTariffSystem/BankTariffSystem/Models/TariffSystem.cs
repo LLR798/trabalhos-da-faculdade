@@ -3,62 +3,33 @@ namespace BankTariffSystem.Models;
 
 class TariffSystem
 {
-    private decimal _totalBalance;
-    private decimal _totalTariff;
+    public event Action<string, double, double> CalculatedClientEvent;
 
-    public decimal TotalBalance
+    public void CalculateBalanceandCustomerTariff(List<DataFile> dataFile, Action<string> callback)
     {
-        get => _totalBalance;
-        set
+        foreach (var line in dataFile)
         {
-            if (value <= 0)
+            var valueTotalBalance = 0d;
+            var valueTotalTariff = 0d;
+
+            var listAccountsCustomer = new List<Account>
+      {
+        new CurrentAccount(line.CurrentAccountBalanceValue),
+        new InternationalAccount(line.InternationalAccountBalanceValue),
+        new CryptoAccount(line.CryptoAccountBalanceValue)
+      };
+
+            foreach (var account in listAccountsCustomer)
             {
-                throw new ArgumentOutOfRangeException("Total balance cannot be less than zero.");
+                if (account is ITariff)
+                {
+                    var accountTarifavel1 = (ITariff)account;
+                    valueTotalTariff += accountTarifavel1.Calculate();
+                }
+                valueTotalBalance += account.BalanceValue;
             }
-            _totalBalance = value;
-        }
-    }
-
-    public decimal TotalTariff
-    {
-        get => _totalTariff;
-        set
-        {
-            if (value <= 0)
-            {
-                throw new ArgumentOutOfRangeException("Total tariff cannot be less than zero.");
-            }
-            _totalTariff = value;
-        }
-    }
-
-    // Evento para notificar o término do cálculo
-    public event Action<string, decimal, decimal> TariffCalculationCompleted;
-
-    // Método para disparar o evento
-    public void OnTariffCalculationCompleted(string cpf, decimal totalBalance, decimal totalTariff)
-    {
-        TariffCalculationCompleted?.Invoke(cpf, totalBalance, totalTariff);
-    }        
-
-    public void AddAccount(Account account)
-    {
-        if (account is CheckingAccount checkingAccount)
-        {
-            decimal tariff = checkingAccount.Calculate(1.5m); // Pass the tariff value, e.g., 1.5%.
-            TotalBalance += checkingAccount.Balance;
-            TotalTariff += tariff;
-        }
-        else if (account is InternationalAccount internationalAccount)
-        {
-            decimal tariff = internationalAccount.Calculate(2.5m); // Pass the tariff value, e.g., 2.5%.
-            TotalBalance += internationalAccount.Balance;
-            TotalTariff += tariff;
-        }
-        else if (account is CryptoAccount cryptoAccount)
-        {
-            // For CryptoAccount, there is no tariff, just add the balance.
-            TotalBalance += cryptoAccount.Balance;
+            CalculatedClientEvent?.Invoke(line.Cpf, valueTotalBalance, valueTotalTariff);
+            callback(line.Cpf);
         }
     }
 }

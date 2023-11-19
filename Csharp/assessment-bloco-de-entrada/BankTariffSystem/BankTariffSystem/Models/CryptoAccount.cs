@@ -1,30 +1,22 @@
 namespace BankTariffSystem.Models;
 
-sealed class CryptoAccount : Account, ITariff
+class CryptoAccount : Account
 {
-    public CryptoAccount(decimal dollarBalance) : base(dollarBalance * 5m)
-    {
-        DollarBalance = dollarBalance;
-    }
+    public static CryptoAccount CreateNewCryptoAccountWithExchange10x()
+  => new CryptoAccount(10);
 
-    private decimal _dollarBalance;
-    public decimal DollarBalance
+    public static CryptoAccount CreateNewCryptoAccountWithExchange5x()
+      => new CryptoAccount(5);
+    
+    private const double rateCambioRealCrypto = 5.0;
+    public CryptoAccount(double valueCurrentBalance) : base(valueCurrentBalance) { }
+
+    public override double BalanceValue
     {
-        get => _dollarBalance;
-        set
+        get => base.BalanceValue;
+        protected set
         {
-            if (value <= 0)
-            {
-                throw new ArgumentOutOfRangeException("Balance cannot be less than zero.");
-            }
-            _dollarBalance = value;
+            base.BalanceValue = value * rateCambioRealCrypto;
         }
-    }
-
-    public decimal Calculate(decimal tariff)
-    {
-        // Crypto account has no tariff.
-        tariff = 0m;
-        return tariff;
     }
 }

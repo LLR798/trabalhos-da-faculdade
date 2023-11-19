@@ -7,6 +7,11 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Remove="main_partial.cs" />
+      <Compile Remove="MainPartial.cs" />
+    </ItemGroup>
+
 
 
 </Project>
