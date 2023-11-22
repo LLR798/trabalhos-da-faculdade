@@ -1,4 +1,4 @@
-# API de Localização do IBGE - Desafio balta.io
+# API de Reserva de Hotéis.
 
 Este repositório contém o código-fonte de uma Web API desenvolvida como parte do projeto de bloco da faculdade, cujo o objetivo éramos criar uma Web API em Java ou C#.
 
