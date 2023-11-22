@@ -9,4 +9,5 @@ public interface ISkateService
     void Incluir(Skate skate);
     void Alterar(Skate skate);
     void Excluir(int id);
+    IList<Marca> obterTodasAsMarcas();
 }

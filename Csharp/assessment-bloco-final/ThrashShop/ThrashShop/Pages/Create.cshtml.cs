@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using NToastNotify;
 using ThrashShop.Models;
 using ThrashShop.Services;
@@ -11,10 +12,19 @@ namespace ThrashShop.Pages;
         private readonly IToastNotification _notify;
         private ISkateService _service;
         
+        public SelectList MarcaOptionsItems { get; set; }
+        
         public Create(ISkateService skateService, IToastNotification notify)
         {
             _service = skateService;
             _notify = notify;
+        }
+
+        public void OnGet()
+        {
+            MarcaOptionsItems = new SelectList(_service.obterTodasAsMarcas(),
+                nameof(Marca.MarcaId),
+                nameof(Marca.Nome));
         }
 
         [BindProperty]

@@ -6,6 +6,7 @@ namespace ThrashShop.Data;
 public class AppDbContext : DbContext
 {
     public DbSet<Skate> Skates { get; set; }
+    public DbSet<Marca> Marcas { get; set; }
     
     protected override void OnConfiguring
     (

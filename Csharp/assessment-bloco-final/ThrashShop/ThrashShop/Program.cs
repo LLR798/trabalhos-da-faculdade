@@ -1,13 +1,14 @@
 using NToastNotify;
 using ThrashShop.Data;
 using ThrashShop.Services;
+using ThrashShop.Services.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container:
 builder.Services.AddRazorPages();
-builder.Services.AddSingleton<ISkateService, SkateService>();
+builder.Services.AddScoped<ISkateService, SkateService>();
 builder.Services.AddDbContext<AppDbContext>();
 
 // Add services ToastNotify:

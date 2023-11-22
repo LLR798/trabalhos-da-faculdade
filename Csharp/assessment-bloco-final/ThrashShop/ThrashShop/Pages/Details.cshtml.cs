@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ThrashShop.Models;
 using ThrashShop.Services;
+using ThrashShop.Services.Memory;
 
 namespace ThrashShop.Pages;
 
