@@ -1,4 +1,5 @@
 using EasyReserve.API.Data;
+using EasyReserve.API.Mappings;
 using EasyReserve.API.Services.HotelService;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,6 +14,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<EasyReserveDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddAutoMapper(typeof(EntitiesToDTOMappingProfile));
 
 builder.Services.AddScoped<IHotelService, HotelService>();
 

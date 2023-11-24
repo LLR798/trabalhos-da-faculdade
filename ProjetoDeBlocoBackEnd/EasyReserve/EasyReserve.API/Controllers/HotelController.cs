@@ -1,3 +1,5 @@
+using AutoMapper;
+using EasyReserve.API.DTOs;
 using EasyReserve.API.Models;
 using EasyReserve.API.Services.HotelService;
 using Microsoft.AspNetCore.Mvc;
@@ -9,15 +11,19 @@ namespace EasyReserve.API.Controllers;
 public class HotelController : Controller
 {
     private readonly IHotelService _hotelService;
+    private readonly IMapper _mapper;
 
-    public HotelController(IHotelService hotelService)
+    public HotelController(IHotelService hotelService, IMapper mapper)
     {
         _hotelService = hotelService;
+        _mapper = mapper;
     }
 
     [HttpPost]
-    public async Task<ActionResult> CreateHotel(Hotel hotel)
+    public async Task<ActionResult> CreateHotel(HotelDTO hotelDTO)
     {
+        var hotel = _mapper.Map<Hotel>(hotelDTO);
+        
         _hotelService.Create(hotel);
         if (await _hotelService.SaveAllAsync())
         {
@@ -30,7 +36,10 @@ public class HotelController : Controller
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Hotel>>> GetAllHotels()
     {
-        return Ok(await _hotelService.GetAllHotels());
+        var hotels = await _hotelService.GetAllHotels();
+        var hotelsDTO = _mapper.Map<IEnumerable<HotelDTO>>(hotels);
+        
+        return Ok(hotelsDTO);
     }
 
     [HttpGet("{id}")]
@@ -42,13 +51,28 @@ public class HotelController : Controller
         {
             return NotFound("Hotel não encontrado, verifique o id do hotel.");
         }
+
+        var hotelDTO = _mapper.Map<HotelDTO>(hotel);
         
-        return Ok(hotel);
+        return Ok(hotelDTO);
     }
 
     [HttpPut]
-    public async Task<ActionResult> UpdateHotel(Hotel hotel)
+    public async Task<ActionResult> UpdateHotel(HotelDTO hotelDTO)
     {
+        if (hotelDTO.HotelId == 0)
+        {
+            return BadRequest("Erro ao tentar alterar o hotel. É preciso informar o ID.");
+        }
+
+        var hotelExist = await _hotelService.GetById(hotelDTO.HotelId);
+        if (hotelExist == null)
+        {
+            return NotFound("Hotel não encontrado, verifique se o ID está correto.");
+        }
+        
+        var hotel = _mapper.Map<Hotel>(hotelDTO);
+        
         _hotelService.Update(hotel);
         if (await _hotelService.SaveAllAsync())
         {
