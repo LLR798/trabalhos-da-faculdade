@@ -59,6 +59,17 @@ public class HotelController : Controller
     [HttpPut]
     public async Task<ActionResult> UpdateHotel(HotelDTO hotelDTO)
     {
+        if (hotelDTO.HotelId == 0)
+        {
+            return BadRequest("Não é possível alterar o hotel, informe o Id do hotel.");
+        }
+
+        var hotelExist = await _hotelRepository.GetByHotelId(hotelDTO.HotelId);
+        if (hotelExist == null)
+        {
+            return NotFound("Hotel não encontrado, verifique se o Id do hotel está correto.");
+        }
+        
         var hotel = _mapper.Map<Hotel>(hotelDTO);
         
         _hotelRepository.UpdateHotel(hotel);
