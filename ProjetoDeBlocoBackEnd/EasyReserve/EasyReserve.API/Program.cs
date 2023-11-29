@@ -1,5 +1,6 @@
 using EasyReserve.API.Data;
 using EasyReserve.API.Interfaces;
+using EasyReserve.API.Mappings;
 using EasyReserve.API.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +12,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+// Dependency injection
 builder.Services.AddScoped<IHotelRepository, HotelRepository>();
+
+// AutoMapper
+builder.Services.AddAutoMapper(typeof(EntitiesToDTOMappingProfile));
 
 
 
