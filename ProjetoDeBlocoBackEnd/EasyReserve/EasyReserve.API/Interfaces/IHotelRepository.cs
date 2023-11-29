@@ -10,5 +10,4 @@ public interface IHotelRepository
     
     Task<Hotel> GetByHotelId(int id);
     Task<IEnumerable<Hotel>> GetAllHotels();
-    // Task<bool> SaveAllAsync();
 }

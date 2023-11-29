@@ -15,47 +15,18 @@ Este repositório contém o código-fonte de uma Web API desenvolvida como parte
 ## Funcionalidades da API :gear:
 A Web API desenvolvida possui as seguintes funcionalidades:
 
-[//]: # (### Autenticação e Autorização :closed_lock_with_key:)
-
-[//]: # (- A API implementa um sistema de autenticação com token JWT para proteger as rotas da API. Os usuários podem se autenticar e receber um token JWT para acessar recursos protegidos.)
-
-[//]: # ()
-[//]: # (<br>)
-
-[//]: # ()
-[//]: # (- Oberservação: Em desenvolvimento.)
-
-[//]: # ()
-[//]: # (### Cadastro de E-mail e Senha :e-mail:)
-
-[//]: # (- Os usuários podem se cadastrar na aplicação fornecendo um e-mail e senha.)
-
-[//]: # ()
-[//]: # (<br>)
-
-[//]: # ()
-[//]: # (- Oberservação: Em desenvolvimento.)
-
-[//]: # ()
-[//]: # (### Login &#40;Token, JWT&#41; :key:)
-
-[//]: # (- Após o cadastro, os usuários podem fazer login para obter um token JWT, que é utilizado para se autenticar nas rotas protegidas da API.)
-
-[//]: # ()
-[//]: # (<br>)
-
-[//]: # ()
-[//]: # (- Oberservação: Em desenvolvimento.)
-
-
-
-
-
 ### CRUD de Hotel :pushpin:
 - A API oferece operações CRUD para gerenciar os hotéis, incluindo a criação, leitura, atualização e exclusão de informações de cada hotel cadastrado.
 
-### Pesquisa por Hotel e por Id do Hotel :round_pushpin:
-- Os usuários podem realizar pesquisas de hotéis com base no Id de cada hotel.
+### CRUD de Quarto :pushpin:
+- A API oferece operações CRUD para gerenciar os quartos, incluindo a criação, leitura, atualização e exclusão de informações de cada quarto cadastrado.
+
+### CRUD de Cliente :pushpin:
+- A API oferece operações CRUD para gerenciar os clientes, incluindo a criação, leitura, atualização e exclusão de informações de cada cliente cadastrado.
+
+### CRUD de Reserva :pushpin:
+- A API oferece operações CRUD para gerenciar as reservas, incluindo a criação, leitura, atualização e exclusão de informações de cada reserva cadastrada.
+
 
 ### Boas práticas da API :ballot_box_with_check:
 - A API segue as boas práticas de desenvolvimento de APIs, como tratamento de erros e respostas consistentes.
@@ -104,24 +75,30 @@ Siga as etapas abaixo para configurar e executar o projeto:
    ```sh
    dotnet run
 
-A API estará disponível em `https://localhost:7297`.
+A API estará disponível em `https://localhost:7273`.
 
 <br>
 
 ## Uso :pencil2:
 A API possui as seguintes rotas:
 
-[//]: # (- `POST /Location/auth/register`: Registra um novo usuário.)
+### Hotel
 
-[//]: # (- `POST /Location/auth/login`: Autentica um usuário e gera um token de acesso.)
-[//]: # (- `POST /Hotel`: Cria um novo hotel &#40;requer autenticação&#41;.)
 - `POST /Hotel`: Cria um novo hotel.
 - `PUT /Hotel/{id}`: Atualiza um hotel existente.
 - `DELETE /Hotel/{id}`: Exclui um hotel existente.
 - `GET /Hotel`: Obtém todas os hotéis cadastradas.
 - `GET /Hotel/{id}`: Obtém um hotel pelo Id.
 
-[//]: # (*IMPORTANTE: Lembre-se de autenticar-se antes de usar as rotas protegidas.*)
+### Quarto:
+
+
+### Cliente:
+
+
+### Reserva:
+
+
 
 ## Considerações finais :checkered_flag:
 

@@ -55,7 +55,7 @@ public class HotelController : Controller
     {
         if (hotelDTO.HotelId == 0)
         {
-            return BadRequest("HotelId inválido. Não é possível atualizar um hotel sem um HotelId válido.");
+            return BadRequest("Id inválido. Não é possível atualizar um hotel sem um Id válido.");
         }
     
         var existingHotel = await _hotelService.GetByHotelId(hotelDTO.HotelId);

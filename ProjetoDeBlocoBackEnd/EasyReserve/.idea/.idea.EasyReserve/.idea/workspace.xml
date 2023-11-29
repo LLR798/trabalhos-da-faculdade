@@ -9,19 +9,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51170d93-be59-46a2-ade6-27b2cfe7e7c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/EasyReserve.API/Services/HotelService/HotelService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EasyReserve.API/Services/HotelService/IHotelService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyReserve.API/Services/ClientService/ClientService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyReserve.API/Services/ClientService/IClientService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EasyReserve/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EasyReserve/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Controllers/ClientController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Controllers/ClientController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/Controllers/HotelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Controllers/HotelController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/DTOs/ClientDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/DTOs/ClientDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/EasyReserve.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/EasyReserve.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Interfaces/IClientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Interfaces/IClientRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/Interfaces/IHotelRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Interfaces/IHotelRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Interfaces/IReserveRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Interfaces/IReserveRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Interfaces/IRoomRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Interfaces/IRoomRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Mappings/EntitiesToDTOMappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Mappings/EntitiesToDTOMappingProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Models/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Models/Client.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Repositories/HotelRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Repositories/HotelRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Repositories/ClientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Repositories/ClientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Repositories/ReserveRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Repositories/ReserveRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Repositories/RoomRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Repositories/RoomRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/ref/EasyReserve.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/ref/EasyReserve.API.dll" afterDir="false" />
@@ -109,7 +118,7 @@
       <option name="presentableId" value="Default" />
       <updated>1693492553549</updated>
       <workItem from="1701201796564" duration="7453000" />
-      <workItem from="1701257736440" duration="13186000" />
+      <workItem from="1701257736440" duration="20083000" />
     </task>
     <servers />
   </component>

@@ -9,5 +9,6 @@ public class EntitiesToDTOMappingProfile : Profile
     public EntitiesToDTOMappingProfile()
     {
         CreateMap<Hotel, HotelDTO>().ReverseMap();
+        CreateMap<Client, ClientDTO>().ReverseMap();
     }
 }

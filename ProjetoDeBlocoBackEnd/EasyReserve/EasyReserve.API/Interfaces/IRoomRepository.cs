@@ -4,9 +4,9 @@ namespace EasyReserve.API.Interfaces;
 
 public interface IRoomRepository
 {
-    void CreateRoom(Room room);
-    void UpdateRoom(Room room);
-    void DeleteRoom(Room room);
+    Task<Room> CreateRoom(Room room);
+    Task<Room> UpdateRoom(Room room);
+    Task<Room> DeleteRoom(Room room);
     
     Task<Room> GetByRoomId(int id);
     Task<IEnumerable<Room>> GetAllRooms();

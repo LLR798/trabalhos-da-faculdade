@@ -13,17 +13,17 @@ public class ReserveRepository : IReserveRepository
         _context = context;
     }
 
-    public void CreateReserve(Reserve reserve)
+    public Task<Reserve> CreateReserve(Reserve reserve)
     {
         throw new NotImplementedException();
     }
 
-    public void UpdateReserve(Reserve reserve)
+    public Task<Reserve> UpdateReserve(Reserve reserve)
     {
         throw new NotImplementedException();
     }
 
-    public void DeleteReserve(Reserve reserve)
+    public Task<Reserve> DeleteReserve(Reserve reserve)
     {
         throw new NotImplementedException();
     }
@@ -38,8 +38,8 @@ public class ReserveRepository : IReserveRepository
         throw new NotImplementedException();
     }
 
-    public async Task<bool> SaveAllAsync()
+    public Task<bool> SaveAllAsync()
     {
-        return await _context.SaveChangesAsync() > 0;
+        throw new NotImplementedException();
     }
 }

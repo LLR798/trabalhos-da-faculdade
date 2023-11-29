@@ -13,17 +13,18 @@ public class RoomRepository : IRoomRepository
         _context = context;
     }
 
-    public void CreateRoom(Room room)
+
+    public Task<Room> CreateRoom(Room room)
     {
         throw new NotImplementedException();
     }
 
-    public void UpdateRoom(Room room)
+    public Task<Room> UpdateRoom(Room room)
     {
         throw new NotImplementedException();
     }
 
-    public void DeleteRoom(Room room)
+    public Task<Room> DeleteRoom(Room room)
     {
         throw new NotImplementedException();
     }
@@ -38,8 +39,8 @@ public class RoomRepository : IRoomRepository
         throw new NotImplementedException();
     }
 
-    public async Task<bool> SaveAllAsync()
+    public Task<bool> SaveAllAsync()
     {
-        return await _context.SaveChangesAsync() > 0;
+        throw new NotImplementedException();
     }
 }

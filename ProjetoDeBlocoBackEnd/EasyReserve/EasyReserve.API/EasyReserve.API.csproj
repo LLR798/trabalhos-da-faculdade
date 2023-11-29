@@ -23,7 +23,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Services\ClientService\" />
       <Folder Include="Services\ReserveService\" />
       <Folder Include="Services\RoomService\" />
     </ItemGroup>

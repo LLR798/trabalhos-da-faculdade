@@ -1,6 +1,7 @@
 using EasyReserve.API.Data;
 using EasyReserve.API.Interfaces;
 using EasyReserve.API.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EasyReserve.API.Repositories;
 
@@ -13,33 +14,47 @@ public class ClientRepository : IClientRepository
         _context = context;
     }
 
-    public void CreateClient(Client client)
+    public async Task<Client> CreateClient(Client client)
     {
-        throw new NotImplementedException();
+        _context.Clients.Add(client);
+        await _context.SaveChangesAsync();
+        return client;
     }
 
-    public void UpdateClient(Client client)
+    public async Task<Client> UpdateClient(Client client)
     {
-        throw new NotImplementedException();
+        var existingClient = await _context.Clients.FindAsync(client.ClientId);
+
+        if (existingClient != null)
+        {
+            _context.Entry(existingClient).State = EntityState.Detached;
+        }
+
+        _context.Clients.Update(client);
+        await _context.SaveChangesAsync();
+        return client;
     }
 
-    public void DeleteClient(Client client)
+    public async Task<Client> DeleteClient(int id)
     {
-        throw new NotImplementedException();
+        var client = await _context.Clients.FindAsync(id);
+
+        if (client != null)
+        {
+            _context.Clients.Remove(client);
+            await _context.SaveChangesAsync();
+        }
+        
+        return client;
     }
 
-    public Task<Client> GetByClientId(int id)
+    public async Task<Client> GetByClientId(int id)
     {
-        throw new NotImplementedException();
+        return await _context.Clients.Where(x => x.ClientId == id).FirstOrDefaultAsync();
     }
 
-    public Task<IEnumerable<Client>> GetAllClients()
+    public async Task<IEnumerable<Client>> GetAllClients()
     {
-        throw new NotImplementedException();
-    }
-
-    public async Task<bool> SaveAllAsync()
-    {
-        return await _context.SaveChangesAsync() > 0;
+        return await _context.Clients.ToListAsync();
     }
 }
