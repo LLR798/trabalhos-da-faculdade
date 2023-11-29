@@ -5,7 +5,7 @@ namespace EasyReserve.API.Models;
 public class Reserve
 {
     [Key]
-    public int ReservaId { get; set; }
+    public int ReserveId { get; set; }
     
     [Required]
     public int RoomId { get; set; }
@@ -22,9 +22,7 @@ public class Reserve
     [Required]
     public decimal TotalCost { get; set; }
     
-    [Required]
-    public Client Client { get; set; }
+    public Client? Client { get; set; }
     
-    [Required]
-    public Room Room { get; set; }
+    public Room? Room { get; set; }
 }

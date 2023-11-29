@@ -82,22 +82,37 @@ A API estará disponível em `https://localhost:7273`.
 ## Uso :pencil2:
 A API possui as seguintes rotas:
 
-### Hotel
+### Hotel:
 
 - `POST /Hotel`: Cria um novo hotel.
 - `PUT /Hotel/{id}`: Atualiza um hotel existente.
 - `DELETE /Hotel/{id}`: Exclui um hotel existente.
-- `GET /Hotel`: Obtém todas os hotéis cadastradas.
+- `GET /Hotel`: Obtém todos os hotéis cadastrados.
 - `GET /Hotel/{id}`: Obtém um hotel pelo Id.
 
 ### Quarto:
 
+- `POST /Room`: Cria um novo quarto.
+- `PUT /Room/{id}`: Atualiza um quarto existente.
+- `DELETE /Room/{id}`: Exclui um quarto existente.
+- `GET /Room`: Obtém todos os quartos cadastrados.
+- `GET /Room/{id}`: Obtém um quarto pelo Id.
 
 ### Cliente:
 
+- `POST /Client`: Cria um novo cliente.
+- `PUT /Client/{id}`: Atualiza um cliente existente.
+- `DELETE /Client/{id}`: Exclui um cliente existente.
+- `GET /Client`: Obtém todas os hotéis cadastrados.
+- `GET /Client/{id}`: Obtém um cliente pelo Id.
 
 ### Reserva:
 
+- `POST /Reserve`: Cria uma nova reserva.
+- `PUT /Reserve/{id}`: Atualiza uma reserva existente.
+- `DELETE /Reserve/{id}`: Exclui uma reserva existente.
+- `GET /Reserve`: Obtém todas as reservas cadastradas.
+- `GET /Reserve/{id}`: Obtém uma reserva pelo Id.
 
 
 ## Considerações finais :checkered_flag:

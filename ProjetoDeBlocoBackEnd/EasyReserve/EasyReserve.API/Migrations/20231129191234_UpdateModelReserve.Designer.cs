@@ -4,6 +4,7 @@ using EasyReserve.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EasyReserve.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231129191234_UpdateModelReserve")]
+    partial class UpdateModelReserve
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,11 +88,11 @@ namespace EasyReserve.API.Migrations
 
             modelBuilder.Entity("EasyReserve.API.Models.Reserve", b =>
                 {
-                    b.Property<int>("ReserveId")
+                    b.Property<int>("ReservaId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReserveId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReservaId"));
 
                     b.Property<int>("ClientId")
                         .HasColumnType("int");
@@ -106,7 +109,7 @@ namespace EasyReserve.API.Migrations
                     b.Property<decimal>("TotalCost")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("ReserveId");
+                    b.HasKey("ReservaId");
 
                     b.HasIndex("ClientId");
 

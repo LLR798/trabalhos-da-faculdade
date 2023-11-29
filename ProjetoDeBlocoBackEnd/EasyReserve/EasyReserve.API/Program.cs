@@ -4,6 +4,7 @@ using EasyReserve.API.Mappings;
 using EasyReserve.API.Repositories;
 using EasyReserve.API.Services.ClientService;
 using EasyReserve.API.Services.HotelService;
+using EasyReserve.API.Services.ReserveService;
 using EasyReserve.API.Services.RoomService;
 using Microsoft.EntityFrameworkCore;
 
@@ -30,9 +31,8 @@ builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IClientService, ClientService>();
 
 // Reserve:
-
-
-
+builder.Services.AddScoped<IReserveRepository, ReserveRepository>();
+builder.Services.AddScoped<IReserveService, ReserveService>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(EntitiesToDTOMappingProfile));

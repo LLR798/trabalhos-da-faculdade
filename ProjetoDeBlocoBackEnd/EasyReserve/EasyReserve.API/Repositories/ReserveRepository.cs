@@ -1,6 +1,7 @@
 using EasyReserve.API.Data;
 using EasyReserve.API.Interfaces;
 using EasyReserve.API.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EasyReserve.API.Repositories;
 
@@ -13,33 +14,49 @@ public class ReserveRepository : IReserveRepository
         _context = context;
     }
 
-    public Task<Reserve> CreateReserve(Reserve reserve)
+    public async Task<Reserve> CreateReserve(Reserve reserve)
     {
-        throw new NotImplementedException();
+        _context.Reserves.Add(reserve);
+        await _context.SaveChangesAsync();
+        
+        return reserve;
     }
 
-    public Task<Reserve> UpdateReserve(Reserve reserve)
+    public async Task<Reserve> UpdateReserve(Reserve reserve)
     {
-        throw new NotImplementedException();
+        var existingReserve = await _context.Reserves.FindAsync(reserve.ReserveId);
+        
+        if (existingReserve != null)
+        {
+            _context.Entry(existingReserve).State = EntityState.Detached;
+        }
+        
+        _context.Reserves.Update(reserve);
+        await _context.SaveChangesAsync();
+        return reserve;
     }
 
-    public Task<Reserve> DeleteReserve(Reserve reserve)
+    public async Task<Reserve> DeleteReserve(int id)
     {
-        throw new NotImplementedException();
+        var reserve = await _context.Reserves.FindAsync(id);
+
+        if (reserve != null)
+        {
+            _context.Reserves.Remove(reserve);
+            await _context.SaveChangesAsync();
+        }
+        
+        return reserve;
     }
 
-    public Task<Reserve> GetByReserveId(int id)
+
+    public async Task<Reserve> GetByReserveId(int id)
     {
-        throw new NotImplementedException();
+        return await _context.Reserves.Where(x => x.ReserveId == id).FirstOrDefaultAsync();
     }
 
-    public Task<IEnumerable<Reserve>> GetAllReservations()
+    public async Task<IEnumerable<Reserve>> GetAllReservations()
     {
-        throw new NotImplementedException();
-    }
-
-    public Task<bool> SaveAllAsync()
-    {
-        throw new NotImplementedException();
+        return await _context.Reserves.ToListAsync();
     }
 }
