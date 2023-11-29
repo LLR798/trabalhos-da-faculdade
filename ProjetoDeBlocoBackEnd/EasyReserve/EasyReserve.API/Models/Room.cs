@@ -5,7 +5,6 @@ namespace EasyReserve.API.Models;
 public class Room
 {
     [Key]
-    [Required]
     public int RoomId { get; set; }
     
     [Required]

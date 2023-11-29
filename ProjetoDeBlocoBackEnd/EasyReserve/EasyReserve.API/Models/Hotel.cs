@@ -5,7 +5,6 @@ namespace EasyReserve.API.Models;
 public class Hotel
 {
     [Key]
-    [Required]
     public int HotelId { get; set; }
     
     [Required]
@@ -14,7 +13,7 @@ public class Hotel
     
     [Required]
     [MaxLength(400, ErrorMessage = "O endereço do hotel não pode ter mais de 400 caracteres.")]
-    public string Adress { get; set; }
+    public string Address { get; set; }
     
     [Required]
     [MaxLength(50, ErrorMessage = "A categoria não pode ter mais de 50 caracteres.")]

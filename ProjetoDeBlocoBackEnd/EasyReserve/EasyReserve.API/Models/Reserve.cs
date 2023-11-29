@@ -5,7 +5,6 @@ namespace EasyReserve.API.Models;
 public class Reserve
 {
     [Key]
-    [Required]
     public int ReservaId { get; set; }
     
     [Required]
