@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using NToastNotify;
 using ThrashShop.Models;
 using ThrashShop.Services;
@@ -10,6 +11,8 @@ public class Editar : PageModel
 {
     private ISkateService _service;
 
+    public SelectList MarcaOptionsItems { get; set; }
+
     private readonly IToastNotification _notify;
 
     public Editar(ISkateService skateService, IToastNotification notify)
@@ -17,12 +20,16 @@ public class Editar : PageModel
         _service = skateService;
         _notify = notify;
     }
-    
-    [BindProperty]
-    public Skate Skate { get; set; }
+
+    [BindProperty] public Skate Skate { get; set; }
 
     public void OnGet(int id)
-        => Skate = _service.Obter(id);
+    {
+        Skate = _service.Obter(id);
+        MarcaOptionsItems = new SelectList(_service.obterTodasAsMarcas(),
+            nameof(Marca.MarcaId),
+            nameof(Marca.Nome));
+    }
 
     public IActionResult OnPost()
     {

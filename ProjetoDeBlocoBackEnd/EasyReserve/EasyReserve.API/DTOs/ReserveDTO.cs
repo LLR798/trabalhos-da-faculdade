@@ -1,6 +1,6 @@
 namespace EasyReserve.API.DTOs;
 
-public class HotelDTO
+public class ReserveDTO
 {
     
 }

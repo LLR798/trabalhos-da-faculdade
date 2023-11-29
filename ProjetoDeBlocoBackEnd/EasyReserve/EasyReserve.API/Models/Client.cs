@@ -1,17 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EasyReserve.API.Models;
 
-public partial class Client
+public class Client
 {
+    [Key]
+    [Required]
     public int ClientId { get; set; }
-
-    public string Name { get; set; } = null!;
-
-    public string Email { get; set; } = null!;
-
-    public string PhoneNumber { get; set; } = null!;
-
-    public virtual ICollection<Reserve> Reserves { get; set; } = new List<Reserve>();
+    
+    [Required]
+    [MaxLength(255, ErrorMessage = "O nome não pode ter mais de 255 caracteres.")]
+    public string Name { get; set; }
+    
+    [Required]
+    [MaxLength(255, ErrorMessage = "O e-mail não pode ter mais de 255 caracteres.")]
+    public string Email { get; set; }
+    
+    public ICollection<Reserve> Reserves { get; set; } = new List<Reserve>();
 }

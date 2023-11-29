@@ -40,6 +40,7 @@ public class SkateService : ISkateService
         skateEncontrado.EntregaExpressa = skate.EntregaExpressa;
         skateEncontrado.DataCadastro = skate.DataCadastro;
         skateEncontrado.ImagemUri = skate.ImagemUri;
+        skateEncontrado.MarcaId = skate.MarcaId;
 
         _context.SaveChanges();
     }

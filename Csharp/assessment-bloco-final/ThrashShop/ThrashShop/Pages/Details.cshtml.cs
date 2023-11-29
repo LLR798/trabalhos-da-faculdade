@@ -15,11 +15,14 @@ public class Details : PageModel
         _service = skateService;
     }
     public Skate Skate { get; private set; }
+    public Marca Marca { get; private set; }
     
     public IActionResult OnGet(int id)
     {
         var servico = new SkateService();
+        
         Skate = _service.Obter(id);
+        Marca = _service.obterTodasAsMarcas().SingleOrDefault(item => item.MarcaId == Skate.MarcaId);
 
         if (Skate == null)
         {

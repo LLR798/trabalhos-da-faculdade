@@ -1,25 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EasyReserve.API.Models;
 
-public partial class Reserve
+public class Reserve
 {
-    public int ReserveId { get; set; }
-
+    [Key]
+    [Required]
+    public int ReservaId { get; set; }
+    
+    [Required]
     public int RoomId { get; set; }
-
+    
+    [Required]
     public int ClientId { get; set; }
-
-    public int Number { get; set; }
-
-    public DateTime CheckIn { get; set; }
-
-    public DateTime CheckOut { get; set; }
-
-    public double TotalCost { get; set; }
-
-    public virtual Client Client { get; set; } = null!;
-
-    public virtual Room Room { get; set; } = null!;
+    
+    [Required]
+    public DateTime DataCheckIn { get; set; }
+    
+    [Required]
+    public DateTime DataCheckOut { get; set; }
+    
+    [Required]
+    public decimal TotalCost { get; set; }
+    
+    [Required]
+    public Client Client { get; set; }
+    
+    [Required]
+    public Room Room { get; set; }
 }

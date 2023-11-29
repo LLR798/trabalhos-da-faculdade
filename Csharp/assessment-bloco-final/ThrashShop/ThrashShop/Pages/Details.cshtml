@@ -18,6 +18,10 @@
             <li><label asp-for="Skate.Preco"></label>: @Html.DisplayFor(model => model.Skate.Preco)</li>
             <li><label asp-for="Skate.EntregaExpressa"></label>: @Model.Skate.EntregaExpressaFormatada</li>
             <li><label asp-for="Skate.DataCadastro"></label>: @Html.DisplayFor(model => model.Skate.DataCadastro)</li>
+            @if (Model.Marca is not null)
+            {
+                <li><label asp-for="Marca.Nome"></label>: @Html.DisplayFor(model => model.Marca.Nome)</li>
+            }
         </ul>
         <a class="btn my-3" style="background-color: #BD76FE"
            asp-page="Editar"
