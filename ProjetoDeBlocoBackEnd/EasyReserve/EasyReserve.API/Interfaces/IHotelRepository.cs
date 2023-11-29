@@ -4,11 +4,11 @@ namespace EasyReserve.API.Interfaces;
 
 public interface IHotelRepository
 {
-    void CreateHotel(Hotel hotel);
-    void UpdateHotel(Hotel hotel);
-    void DeleteHotel(Hotel hotel);
+    Task<Hotel> CreateHotel(Hotel hotel);
+    Task<Hotel> UpdateHotel(Hotel hotel);
+    Task<Hotel> DeleteHotel(int id);
     
     Task<Hotel> GetByHotelId(int id);
     Task<IEnumerable<Hotel>> GetAllHotels();
-    Task<bool> SaveAllAsync();
+    // Task<bool> SaveAllAsync();
 }

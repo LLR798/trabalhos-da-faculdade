@@ -5,6 +5,8 @@
 /Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.runtimeconfig.json
 /Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.dll
 /Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.pdb
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/bin/Debug/net7.0/AutoMapper.dll
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/bin/Debug/net7.0/Azure.Core.dll
 /Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/bin/Debug/net7.0/Azure.Identity.dll
 /Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/bin/Debug/net7.0/Humanizer.dll
@@ -74,5 +76,3 @@
 /Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.pdb
 /Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.genruntimeconfig.cache
 /Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/obj/Debug/net7.0/ref/EasyReserve.API.dll
-/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/bin/Debug/net7.0/AutoMapper.dll
-/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

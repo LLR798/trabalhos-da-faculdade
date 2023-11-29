@@ -2,6 +2,7 @@ using AutoMapper;
 using EasyReserve.API.DTOs;
 using EasyReserve.API.Interfaces;
 using EasyReserve.API.Models;
+using EasyReserve.API.Services.HotelService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EasyReserve.API.Controllers;
@@ -10,95 +11,87 @@ namespace EasyReserve.API.Controllers;
 [Route("api/[controller]")]
 public class HotelController : Controller
 {
-    private readonly IHotelRepository _hotelRepository;
-    private readonly IMapper _mapper;
-    public HotelController(IHotelRepository hotelRepository, IMapper mapper)
+    private readonly IHotelService _hotelService;
+    public HotelController(IHotelService hotelService)
     {
-        _hotelRepository = hotelRepository;
-        _mapper = mapper;
+        _hotelService = hotelService;
     }
 
     [HttpPost]
     public async Task<ActionResult> CreateHotel(HotelDTO hotelDTO)
     {
-        var hotel = _mapper.Map<Hotel>(hotelDTO);
-        
-        _hotelRepository.CreateHotel(hotel);
+        var hotelDTOAdded = await _hotelService.CreateHotel(hotelDTO);
 
-        if (await _hotelRepository.SaveAllAsync())
+        if (hotelDTOAdded == null)
         {
-            return Ok("Hotel cadastrado com sucesso.");
+            return BadRequest("Ocorreu um erro ao tentar cadastrar o hotel.");
         }
         
-        return BadRequest("Ocorreu um erro ao tentar cadastrar o hotel.");
+        return Ok("Hotel cadastrado com sucesso.");
     }
     
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Hotel>>> GetAllHotels()
+    public async Task<ActionResult> GetAllHotels()
     {
-        var hotels = await _hotelRepository.GetAllHotels();
-        var hotelsDTO = _mapper.Map<IEnumerable<HotelDTO>>(hotels);
+        var hotelsDTO = await _hotelService.GetAllHotels();
         return Ok(hotelsDTO);
     }
 
     [HttpGet("{id}")]
     public async Task<ActionResult> GetHotel(int id)
     {
-        var hotel = await _hotelRepository.GetByHotelId(id);
+        var hotelDTO = await _hotelService.GetByHotelId(id);
 
-        if (hotel == null)
+        if (hotelDTO == null)
         {
             return NotFound("Hotel não encontrado, verifique o Id do hotel.");
         }
-
-        var hotelDTO = _mapper.Map<HotelDTO>(hotel);
-
+        
         return Ok(hotelDTO);
     }
-
+    
     [HttpPut]
     public async Task<ActionResult> UpdateHotel(HotelDTO hotelDTO)
     {
         if (hotelDTO.HotelId == 0)
         {
-            return BadRequest("Não é possível alterar o hotel, informe o Id do hotel.");
+            return BadRequest("HotelId inválido. Não é possível atualizar um hotel sem um HotelId válido.");
         }
-
-        var hotelExist = await _hotelRepository.GetByHotelId(hotelDTO.HotelId);
-        if (hotelExist == null)
+    
+        var existingHotel = await _hotelService.GetByHotelId(hotelDTO.HotelId);
+    
+        if (existingHotel == null)
         {
-            return NotFound("Hotel não encontrado, verifique se o Id do hotel está correto.");
+            return NotFound("Hotel não encontrado. Verifique o Id do hotel.");
         }
-        
-        var hotel = _mapper.Map<Hotel>(hotelDTO);
-        
-        _hotelRepository.UpdateHotel(hotel);
-
-        if (await _hotelRepository.SaveAllAsync())
+    
+        var hotelDTOUpdated = await _hotelService.UpdateHotel(hotelDTO);
+    
+        if (hotelDTOUpdated == null)
         {
-            return Ok("Hotel alterado com sucesso.");
+            return BadRequest("Ocorreu um erro ao tentar alterar os dados do hotel.");
         }
-
-        return BadRequest("Ocorreu um erro ao tentar alterar os dados do hotel.");
+    
+        return Ok("Hotel alterado com sucesso.");
     }
 
     [HttpDelete("{id}")]
     public async Task<ActionResult> DeleteHotel(int id)
     {
-        var hotel = await _hotelRepository.GetByHotelId(id);
+        var hotel = await _hotelService.GetByHotelId(id);
 
         if (hotel == null)
         {
             return NotFound("Hotel não encontrado, verifique o Id do hotel.");
         }
-        
-        _hotelRepository.DeleteHotel(hotel);
 
-        if (await _hotelRepository.SaveAllAsync())
+        var hotelDTODeleted = await _hotelService.DeleteHotel(id);
+
+        if (hotelDTODeleted == null)
         {
-            return Ok("Hotel excluído com sucesso.");
+            return BadRequest("Ocorreu um erro ao tentar excluir o hotel.");
         }
 
-        return BadRequest("Ocorreu um erro ao tentar excluir o hotel.");
+        return Ok("Hotel excluído com sucesso.");
     }
 }

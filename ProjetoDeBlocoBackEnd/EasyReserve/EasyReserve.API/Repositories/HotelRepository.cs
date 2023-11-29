@@ -15,19 +15,39 @@ public class HotelRepository : IHotelRepository
     }
 
 
-    public void CreateHotel(Hotel hotel)
+    public async Task<Hotel> CreateHotel(Hotel hotel)
     {
         _context.Hotels.Add(hotel);
+        await _context.SaveChangesAsync();
+        
+        return hotel;
+    }
+    
+    public async Task<Hotel> UpdateHotel(Hotel hotel)
+    {
+        var existingHotel = await _context.Hotels.FindAsync(hotel.HotelId);
+        
+        if (existingHotel != null)
+        {
+            _context.Entry(existingHotel).State = EntityState.Detached;
+        }
+
+        _context.Hotels.Update(hotel);
+        await _context.SaveChangesAsync();
+        return hotel;
     }
 
-    public void UpdateHotel(Hotel hotel)
+    public async Task<Hotel> DeleteHotel(int id)
     {
-        _context.Entry(hotel).State = EntityState.Modified;
-    }
+        var hotel = await _context.Hotels.FindAsync(id);
 
-    public void DeleteHotel(Hotel hotel)
-    {
-        _context.Hotels.Remove(hotel);
+        if (hotel != null)
+        {
+            _context.Hotels.Remove(hotel);
+            await _context.SaveChangesAsync();
+        }
+        
+        return hotel;
     }
 
     public async Task<Hotel> GetByHotelId(int id)
@@ -38,10 +58,5 @@ public class HotelRepository : IHotelRepository
     public async Task<IEnumerable<Hotel>> GetAllHotels()
     {
         return await _context.Hotels.ToListAsync();
-    }
-
-    public async Task<bool> SaveAllAsync()
-    {
-        return await _context.SaveChangesAsync() > 0;
     }
 }
