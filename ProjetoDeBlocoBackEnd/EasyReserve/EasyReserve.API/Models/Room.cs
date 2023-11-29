@@ -7,8 +7,7 @@ public class Room
     [Key]
     public int RoomId { get; set; }
     
-    [Required]
-    public int HotelId { get; set; }
+    public int? HotelId { get; set; }
     
     [Required]
     [StringLength(20, ErrorMessage = "O número do quarto não pode ter mais de 20 caracteres.")]
@@ -28,7 +27,6 @@ public class Room
     [Required]
     public decimal Price { get; set; }
     
-    [Required]
     public Hotel Hotel { get; set; }
     
     public ICollection<Reserve> Reserves { get; set; } = new List<Reserve>();

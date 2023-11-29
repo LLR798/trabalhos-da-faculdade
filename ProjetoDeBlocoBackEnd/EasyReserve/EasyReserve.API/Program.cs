@@ -4,6 +4,7 @@ using EasyReserve.API.Mappings;
 using EasyReserve.API.Repositories;
 using EasyReserve.API.Services.ClientService;
 using EasyReserve.API.Services.HotelService;
+using EasyReserve.API.Services.RoomService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,7 +22,8 @@ builder.Services.AddScoped<IHotelRepository, HotelRepository>();
 builder.Services.AddScoped<IHotelService, HotelService>();
 
 // Room:
-
+builder.Services.AddScoped<IRoomRepository, RoomRepository>();
+builder.Services.AddScoped<IRoomService, RoomService>();
 
 // Client:
 builder.Services.AddScoped<IClientRepository, ClientRepository>();

@@ -1,6 +1,7 @@
 using EasyReserve.API.Data;
 using EasyReserve.API.Interfaces;
 using EasyReserve.API.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EasyReserve.API.Repositories;
 
@@ -13,34 +14,48 @@ public class RoomRepository : IRoomRepository
         _context = context;
     }
 
-
-    public Task<Room> CreateRoom(Room room)
+    public async Task<Room> CreateRoom(Room room)
     {
-        throw new NotImplementedException();
+        _context.Rooms.Add(room);
+        await _context.SaveChangesAsync();
+        
+        return room;
     }
 
-    public Task<Room> UpdateRoom(Room room)
+    public async Task<Room> UpdateRoom(Room room)
     {
-        throw new NotImplementedException();
+        var existingRoom = await _context.Rooms.FindAsync(room.RoomId);
+        
+        if (existingRoom != null)
+        {
+            _context.Entry(existingRoom).State = EntityState.Detached;
+        }
+
+        _context.Rooms.Update(room);
+        await _context.SaveChangesAsync();
+        return room;
     }
 
-    public Task<Room> DeleteRoom(Room room)
+    public async Task<Room> DeleteRoom(int id)
     {
-        throw new NotImplementedException();
+        var room = await _context.Rooms.FindAsync(id);
+
+        if (room != null)
+        {
+            _context.Rooms.Remove(room);
+            await _context.SaveChangesAsync();
+        }
+        
+        return room;
     }
 
-    public Task<Room> GetByRoomId(int id)
+    public async Task<Room> GetByRoomId(int id)
     {
-        throw new NotImplementedException();
+        return await _context.Rooms.Where(x => x.RoomId == id).FirstOrDefaultAsync();
     }
 
-    public Task<IEnumerable<Room>> GetAllRooms()
+    public async Task<IEnumerable<Room>> GetAllRooms()
     {
-        throw new NotImplementedException();
-    }
-
-    public Task<bool> SaveAllAsync()
-    {
-        throw new NotImplementedException();
+        return await _context.Rooms.ToListAsync();
     }
 }

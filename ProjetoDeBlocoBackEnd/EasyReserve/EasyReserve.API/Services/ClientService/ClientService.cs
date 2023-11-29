@@ -34,7 +34,7 @@ public class ClientService : IClientService
 
     public async Task<ClientDTO> DeleteClient(int id)
     {
-        var clientDeleted = await _clientRepository.GetByClientId(id);
+        var clientDeleted = await _clientRepository.DeleteClient(id);
         return _mapper.Map<ClientDTO>(clientDeleted);
     }
 
