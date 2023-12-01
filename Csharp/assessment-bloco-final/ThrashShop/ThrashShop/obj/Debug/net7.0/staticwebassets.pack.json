@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets/images/bearings2.png"
     },
     {
+      "Id": "/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-final/ThrashShop/ThrashShop/wwwroot/images/capasobre.jpg",
+      "PackagePath": "staticwebassets/images/capasobre.jpg"
+    },
+    {
       "Id": "/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-final/ThrashShop/ThrashShop/wwwroot/images/deck1.png",
       "PackagePath": "staticwebassets/images/deck1.png"
     },

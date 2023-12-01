@@ -167,7 +167,7 @@ public class SkateService : ISkateService
         _skates.Remove(skateEncontrado);
     }
 
-    public IList<Marca> obterTodasAsMarcas()
+    public IList<Marca> ObterTodasAsMarcas()
     {
         return new List<Marca>()
         {
@@ -181,6 +181,20 @@ public class SkateService : ISkateService
             new Marca() {Nome = "Krooked" },
             new Marca() {Nome = "Zero" },
             new Marca() {Nome = "April" },
+        };
+    }
+
+    public IList<Categoria> ObterTodasAsCategorias()
+    {
+        return new List<Categoria>()
+        {
+            new Categoria() {Descricao = "Rolamento" },
+            new Categoria() {Descricao = "Shape" },
+            new Categoria() {Descricao = "Parafusos" },
+            new Categoria() {Descricao = "Trucks" },
+            new Categoria() {Descricao = "Lixas" },
+            new Categoria() {Descricao = "Acessórios" },
+            new Categoria() {Descricao = "Rodas" },
         };
     }
 }

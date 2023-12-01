@@ -5,11 +5,11 @@
 <h2 class="my-3">@Model.Skate.Nome</h2>
 
 <div class="row">
-    
+
     <div class="col-4">
         <img class="img-fluid rounded" src="@Model.Skate.ImagemUri" alt="Imagem de um skate">
     </div>
-    
+
     <div class="col-6">
         <h4 class="my-3">Sobre:</h4>
         <p>@Model.Skate.Descricao</p>
@@ -22,10 +22,20 @@
             {
                 <li><label asp-for="Marca.Nome"></label>: @Html.DisplayFor(model => model.Marca.Nome)</li>
             }
+            @if (Model.Skate.Categorias.Count > 0)
+            {
+                <li>
+                    <label asp-for="Skate.Categorias"></label>: @Html.DisplayFor(model => model.Marca.Nome)
+                    @String.Join(", ", Model.Skate.Categorias.Select(item => item.Descricao))
+                </li>
+            }
+
         </ul>
         <a class="btn my-3" style="background-color: #BD76FE"
            asp-page="Editar"
-           asp-route-id="@Model.Skate.SkateId">Editar</a>
+           asp-route-id="@Model.Skate.SkateId">
+            Editar
+        </a>
     </div>
-    
+
 </div>

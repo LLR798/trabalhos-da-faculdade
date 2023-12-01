@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2E4riMj1VCHfXcTgU8kGhB65Ys5XO5mihlQP+r53xzo=",
+  "Hash": "GW6n2baF1DZEQEpcVaEZjw0otIWa19SuwiMWNvXIC7I=",
   "Source": "ThrashShop",
   "BasePath": "_content/ThrashShop",
   "Mode": "Default",
@@ -202,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/bearings2.png"
+    },
+    {
+      "Identity": "/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-final/ThrashShop/ThrashShop/wwwroot/images/capasobre.jpg",
+      "SourceId": "ThrashShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-final/ThrashShop/ThrashShop/wwwroot/",
+      "BasePath": "_content/ThrashShop",
+      "RelativePath": "images/capasobre.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/capasobre.jpg"
     },
     {
       "Identity": "/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/Csharp/assessment-bloco-final/ThrashShop/ThrashShop/wwwroot/images/deck1.png",

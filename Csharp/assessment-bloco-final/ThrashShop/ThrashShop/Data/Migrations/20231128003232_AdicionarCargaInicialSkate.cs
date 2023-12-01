@@ -20,10 +20,6 @@ namespace ThrashShop.Data.Migrations
         {
             return new List<Skate>()
             {
-                // Ver se já vai estar commitado no git
-                // Pegar a carga inicial dos hamburguers 
-                // E commitar
-                // Depois tentar fazer o delete e ver se consegue recriar o banco
                 new Skate
                 {
                     Nome = "Rolamento Reds Bones",

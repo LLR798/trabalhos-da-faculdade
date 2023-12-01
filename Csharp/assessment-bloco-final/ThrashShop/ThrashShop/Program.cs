@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container:
 builder.Services.AddRazorPages();
 
-builder.Services.AddScoped<ISkateService, SkateService>();
+builder.Services.AddTransient<ISkateService, SkateService>();
 
 builder.Services.AddDbContext<AppDbContext>();
 
@@ -18,6 +18,7 @@ builder.Services.AddRazorPages().AddNToastNotifyToastr( new ToastrOptions()
 {
     ProgressBar = true,
     PositionClass = ToastPositions.TopCenter,
+    TimeOut = 5000,
     PreventDuplicates = true,
     CloseButton = true,
 });

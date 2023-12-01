@@ -12,6 +12,7 @@ public class Editar : PageModel
     private ISkateService _service;
 
     public SelectList MarcaOptionsItems { get; set; }
+    public SelectList CategoriaOptionsItems { get; set; }
 
     private readonly IToastNotification _notify;
 
@@ -22,17 +23,31 @@ public class Editar : PageModel
     }
 
     [BindProperty] public Skate Skate { get; set; }
+    
+    [BindProperty]
+    public IList<int> CategoriaIds { get; set; }
 
     public void OnGet(int id)
     {
         Skate = _service.Obter(id);
-        MarcaOptionsItems = new SelectList(_service.obterTodasAsMarcas(),
+
+        CategoriaIds = Skate.Categorias.Select(item => item.CategoriaId).ToList();
+        
+        MarcaOptionsItems = new SelectList(_service.ObterTodasAsMarcas(),
             nameof(Marca.MarcaId),
-            nameof(Marca.Nome));
+            nameof(Marca.Nome)); 
+        
+        CategoriaOptionsItems = new SelectList(_service.ObterTodasAsCategorias(),
+            nameof(Categoria.CategoriaId),
+            nameof(Categoria.Descricao));
     }
 
     public IActionResult OnPost()
     {
+        Skate.Categorias = _service.ObterTodasAsCategorias()
+            .Where(item => CategoriaIds.Contains(item.CategoriaId))
+            .ToList();
+        
         if (!ModelState.IsValid)
         {
             return Page();

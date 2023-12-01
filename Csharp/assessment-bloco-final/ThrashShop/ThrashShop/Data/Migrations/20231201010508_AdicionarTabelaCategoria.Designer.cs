@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ThrashShop.Data;
 
@@ -11,9 +12,11 @@ using ThrashShop.Data;
 namespace ThrashShop.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231201010508_AdicionarTabelaCategoria")]
+    partial class AdicionarTabelaCategoria
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,21 +24,6 @@ namespace ThrashShop.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("CategoriaSkate", b =>
-                {
-                    b.Property<int>("CategoriasCategoriaId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SkatesSkateId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CategoriasCategoriaId", "SkatesSkateId");
-
-                    b.HasIndex("SkatesSkateId");
-
-                    b.ToTable("CategoriaSkate");
-                });
 
             modelBuilder.Entity("ThrashShop.Models.Categoria", b =>
                 {
@@ -110,21 +98,6 @@ namespace ThrashShop.Data.Migrations
                     b.HasIndex("MarcaId");
 
                     b.ToTable("TB_SKATE");
-                });
-
-            modelBuilder.Entity("CategoriaSkate", b =>
-                {
-                    b.HasOne("ThrashShop.Models.Categoria", null)
-                        .WithMany()
-                        .HasForeignKey("CategoriasCategoriaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ThrashShop.Models.Skate", null)
-                        .WithMany()
-                        .HasForeignKey("SkatesSkateId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("ThrashShop.Models.Skate", b =>

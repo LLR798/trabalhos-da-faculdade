@@ -8,6 +8,8 @@ public class AppDbContext : DbContext
     public DbSet<Skate> Skates { get; set; }
     public DbSet<Marca> Marcas { get; set; }
     
+    public DbSet<Categoria> Categorias { get; set; }
+    
     protected override void OnConfiguring
     (
         DbContextOptionsBuilder optionsBuilder
@@ -17,7 +19,9 @@ public class AppDbContext : DbContext
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json")
             .Build();
+        
         string conn = config.GetConnectionString("DefaultConnection");
+        
         optionsBuilder.UseSqlServer(conn);
     }
 }

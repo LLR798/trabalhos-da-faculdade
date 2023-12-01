@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using ThrashShop.Data;
 using ThrashShop.Models;
 
@@ -17,12 +18,19 @@ public class SkateService : ISkateService
 
     public Skate Obter(int id)
     {
-        return _context.Skates.SingleOrDefault(item => item.SkateId == id);
+        return _context.Skates
+            .Include(item => item.Categorias)
+            .SingleOrDefault(item => item.SkateId == id);
     }
     
-    public IList<Marca> obterTodasAsMarcas()
+    public IList<Marca> ObterTodasAsMarcas()
     {
         return _context.Marcas.ToList();
+    } 
+    
+    public IList<Categoria> ObterTodasAsCategorias()
+    {
+        return _context.Categorias.ToList();
     }
 
     public void Incluir(Skate skate)
@@ -41,6 +49,7 @@ public class SkateService : ISkateService
         skateEncontrado.DataCadastro = skate.DataCadastro;
         skateEncontrado.ImagemUri = skate.ImagemUri;
         skateEncontrado.MarcaId = skate.MarcaId;
+        skateEncontrado.Categorias = skate.Categorias;
 
         _context.SaveChanges();
     }

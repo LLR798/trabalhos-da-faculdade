@@ -11,6 +11,7 @@
     <list default="true" id="51170d93-be59-46a2-ade6-27b2cfe7e7c9" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/EasyReserve.API/Services/ReserveService/IReserveService.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/EasyReserve.API/Services/ReserveService/ReserveService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EasyReserve/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EasyReserve/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/Controllers/ReserveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Controllers/ReserveController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/DTOs/ReserveDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/DTOs/ReserveDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/EasyReserve.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/EasyReserve.API.csproj" afterDir="false" />
@@ -111,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1693492553549</updated>
       <workItem from="1701201796564" duration="7453000" />
-      <workItem from="1701257736440" duration="25870000" />
+      <workItem from="1701257736440" duration="26314000" />
     </task>
     <servers />
   </component>

@@ -13,6 +13,7 @@ namespace ThrashShop.Pages;
         private ISkateService _service;
         
         public SelectList MarcaOptionsItems { get; set; }
+        public SelectList CategoriaOptionsItems { get; set; }
         
         public Create(ISkateService skateService, IToastNotification notify)
         {
@@ -22,16 +23,27 @@ namespace ThrashShop.Pages;
 
         public void OnGet()
         {
-            MarcaOptionsItems = new SelectList(_service.obterTodasAsMarcas(),
+            MarcaOptionsItems = new SelectList(_service.ObterTodasAsMarcas(),
                 nameof(Marca.MarcaId),
-                nameof(Marca.Nome));
+                nameof(Marca.Nome));    
+            
+            CategoriaOptionsItems = new SelectList(_service.ObterTodasAsCategorias(),
+                nameof(Categoria.CategoriaId),
+                nameof(Categoria.Descricao));
         }
 
         [BindProperty]
-        public Skate Skate { get; set; }
+        public Skate Skate { get; set; } 
+        
+        [BindProperty]
+        public IList<int> CategoriaIds { get; set; }
 
         public IActionResult OnPost()
         {
+            Skate.Categorias = _service.ObterTodasAsCategorias()
+                .Where(item => CategoriaIds.Contains(item.CategoriaId))
+                .ToList();
+            
             if (!ModelState.IsValid)
             {
                 _notify.AddErrorToastMessage("Erro ao criar um novo equipamento!");
