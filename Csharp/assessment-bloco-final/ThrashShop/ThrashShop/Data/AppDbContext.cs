@@ -1,13 +1,13 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ThrashShop.Models;
 
 namespace ThrashShop.Data;
 
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext
 {
     public DbSet<Skate> Skates { get; set; }
     public DbSet<Marca> Marcas { get; set; }
-    
     public DbSet<Categoria> Categorias { get; set; }
     
     protected override void OnConfiguring

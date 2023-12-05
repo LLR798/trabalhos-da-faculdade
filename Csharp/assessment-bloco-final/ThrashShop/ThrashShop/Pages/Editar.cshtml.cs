@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -7,6 +8,7 @@ using ThrashShop.Services;
 
 namespace ThrashShop.Pages;
 
+[Authorize]
 public class Editar : PageModel
 {
     private ISkateService _service;

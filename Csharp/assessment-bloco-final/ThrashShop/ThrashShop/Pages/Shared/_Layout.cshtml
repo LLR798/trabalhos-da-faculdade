@@ -8,13 +8,9 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/ThrashShop.styles.css" asp-append-version="true"/>
         <style>
-            /* Set the border color */
-              
             .custom-toggler.navbar-toggler {
                 border-color: black;
             }
-            /* Setting the stroke to black using rgb values (0, 0, 0) */
-              
             .custom-toggler .navbar-toggler-icon {
                 background-image: url(
     "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -30,26 +26,34 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor04">
-          <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                  <a class="nav-link active" asp-page="/Index">Home
-                      @* <span class="visually-hidden">(current)</span> *@
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" asp-page="/About">Sobre</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" asp-page="/Create">Incluir</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" asp-page="/Privacy">Privacidade</a>
-              </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-sm-2" type="search" placeholder="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-          </form>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" asp-page="/Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-page="/About">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-page="/Create">Incluir</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-page="Marcas/Index">Marcas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-page="Categorias/Index">Categorias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-page="/Privacy">Privacidade</a>
+                </li>
+            </ul>
+            
+            <form class="d-flex">
+                <input class="form-control me-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            
+            <partial name="_LoginPartial"/>
+            
         </div>
       </div>
     </nav>

@@ -31,11 +31,14 @@
             }
 
         </ul>
-        <a class="btn my-3" style="background-color: #BD76FE"
-           asp-page="Editar"
-           asp-route-id="@Model.Skate.SkateId">
-            Editar
-        </a>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a class="btn my-3" style="background-color: #BD76FE"
+               asp-page="Editar"
+               asp-route-id="@Model.Skate.SkateId">
+                Editar
+            </a>
+        }
     </div>
 
 </div>
