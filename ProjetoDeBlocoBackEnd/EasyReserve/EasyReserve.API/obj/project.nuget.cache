@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZcdxzbWIiKSakbenDrpscNVTMXRlfpfzlwVl2U5g4EU5CAesG0+NCfV9Mx4Ntktl855zVnB5jyGFfwkrRELKpw==",
+  "dgSpecHash": "cbpfHYz01E39IudrQr8+Niim+5YQP/7w/bCgz5TncZXkz74M/uzxGOwOFRMpKM/ueJ/RbBUqn3mzxylT+NvK5Q==",
   "success": true,
   "projectFilePath": "/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/EasyReserve.API.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "/Users/lucaslumertz/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/microsoft.extensions.dependencymodel/7.0.0/microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
+    "/Users/lucaslumertz/.nuget/packages/microsoft.extensions.http/7.0.0/microsoft.extensions.http.7.0.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/microsoft.extensions.logging/7.0.0/microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
@@ -46,6 +47,8 @@
     "/Users/lucaslumertz/.nuget/packages/microsoft.sqlserver.server/1.0.0/microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
+    "/Users/lucaslumertz/.nuget/packages/refit/7.0.0/refit.7.0.0.nupkg.sha512",
+    "/Users/lucaslumertz/.nuget/packages/refit.httpclientfactory/7.0.0/refit.httpclientfactory.7.0.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
@@ -58,6 +61,7 @@
     "/Users/lucaslumertz/.nuget/packages/system.identitymodel.tokens.jwt/6.24.0/system.identitymodel.tokens.jwt.6.24.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/system.memory.data/1.0.2/system.memory.data.1.0.2.nupkg.sha512",
+    "/Users/lucaslumertz/.nuget/packages/system.net.http.json/7.0.1/system.net.http.json.7.0.1.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/system.runtime.caching/6.0.0/system.runtime.caching.6.0.0.nupkg.sha512",
@@ -70,7 +74,7 @@
     "/Users/lucaslumertz/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/system.text.encoding.codepages/6.0.0/system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/lucaslumertz/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
+    "/Users/lucaslumertz/.nuget/packages/system.text.json/7.0.3/system.text.json.7.0.3.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/Users/lucaslumertz/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
   ],

@@ -27,6 +27,8 @@ A Web API desenvolvida possui as seguintes funcionalidades:
 ### CRUD de Reserva :pushpin:
 - A API oferece operações CRUD para gerenciar as reservas, incluindo a criação, leitura, atualização e exclusão de informações de cada reserva cadastrada.
 
+### Consumir a API Via Cep:
+- A API oferece a possibilidade de consulta de CEP de todos os estados do Brasil.
 
 ### Boas práticas da API :ballot_box_with_check:
 - A API segue as boas práticas de desenvolvimento de APIs, como tratamento de erros e respostas consistentes.
@@ -114,6 +116,8 @@ A API possui as seguintes rotas:
 - `GET /Reserve`: Obtém todas as reservas cadastradas.
 - `GET /Reserve/{id}`: Obtém uma reserva pelo Id.
 
+### Cep:
+- `GET /Cep/{cep}`: Obtém os dados de um endereço conforme o CEP.
 
 ## Considerações finais :checkered_flag:
 

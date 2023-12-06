@@ -1,4 +1,5 @@
 using EasyReserve.API.Data;
+using EasyReserve.API.Integration.Refit;
 using EasyReserve.API.Interfaces;
 using EasyReserve.API.Mappings;
 using EasyReserve.API.Repositories;
@@ -6,7 +7,9 @@ using EasyReserve.API.Services.ClientService;
 using EasyReserve.API.Services.HotelService;
 using EasyReserve.API.Services.ReserveService;
 using EasyReserve.API.Services.RoomService;
+using EasyReserve.API.Services.ViaCepService;
 using Microsoft.EntityFrameworkCore;
+using Refit;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,8 +37,18 @@ builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IReserveRepository, ReserveRepository>();
 builder.Services.AddScoped<IReserveService, ReserveService>();
 
+// Via cep:
+builder.Services.AddScoped<IViaCepService, ViaCepService>(); 
+
+// Refit:
+builder.Services.AddRefitClient<IViaCepIntegrationRefit>().ConfigureHttpClient(c =>
+{
+    c.BaseAddress = new Uri("https://viacep.com.br");
+});
+
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(EntitiesToDTOMappingProfile));
+
 
 
 

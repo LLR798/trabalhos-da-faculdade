@@ -9,26 +9,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51170d93-be59-46a2-ade6-27b2cfe7e7c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/EasyReserve.API/Services/ReserveService/IReserveService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EasyReserve.API/Services/ReserveService/ReserveService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyReserve.API/Controllers/CepController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyReserve.API/Integration/Refit/IViaCepIntegrationRefit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyReserve.API/Integration/Response/ViaCepResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyReserve.API/Services/ViaCepService/IViaCepService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyReserve.API/Services/ViaCepService/ViaCepService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EasyReserve/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EasyReserve/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Controllers/ClientController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Controllers/ClientController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Controllers/HotelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Controllers/HotelController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/Controllers/ReserveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Controllers/ReserveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyReserve.API/DTOs/ReserveDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/DTOs/ReserveDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Controllers/RoomController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Controllers/RoomController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/EasyReserve.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/EasyReserve.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Interfaces/IReserveRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Interfaces/IReserveRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Mappings/EntitiesToDTOMappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Mappings/EntitiesToDTOMappingProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Models/Reserve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Models/Reserve.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyReserve.API/Repositories/ReserveRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/Repositories/ReserveRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/bin/Debug/net7.0/EasyReserve.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/ref/EasyReserve.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/ref/EasyReserve.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/refint/EasyReserve.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/Debug/net7.0/refint/EasyReserve.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/EasyReserve.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/EasyReserve.API.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/EasyReserve.API.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/EasyReserve.API.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/EasyReserve.API.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/EasyReserve.API.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyReserve.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EasyReserve.API/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +50,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -113,6 +129,7 @@
       <updated>1693492553549</updated>
       <workItem from="1701201796564" duration="7453000" />
       <workItem from="1701257736440" duration="26314000" />
+      <workItem from="1701881156292" duration="5050000" />
     </task>
     <servers />
   </component>

@@ -6,7 +6,7 @@ namespace EasyReserve.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ReserveController : Controller
+public class ReserveController : ControllerBase
 {
     private readonly IReserveService _reserveService;
 

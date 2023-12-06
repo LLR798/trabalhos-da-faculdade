@@ -6,7 +6,7 @@ namespace EasyReserve.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class RoomController : Controller
+public class RoomController : ControllerBase
 {
     private readonly IRoomService _roomService;
 

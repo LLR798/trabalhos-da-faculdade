@@ -76,3 +76,5 @@
 /Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.pdb
 /Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/obj/Debug/net7.0/EasyReserve.API.genruntimeconfig.cache
 /Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/obj/Debug/net7.0/ref/EasyReserve.API.dll
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/bin/Debug/net7.0/Refit.dll
+/Users/lucaslumertz/Documents/1Programacao/Projetos/Faculdade/trabalhos-da-faculdade/ProjetoDeBlocoBackEnd/EasyReserve/EasyReserve.API/bin/Debug/net7.0/Refit.HttpClientFactory.dll
